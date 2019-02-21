@@ -1,0 +1,14 @@
+/AeroSceneryCultivationEditor/bin/Release
+/AeroScenery/CultivationCompilerConsole/obj/Debug
+/CultivationCompiler/obj/Debug
+/packages/**
+/CultivationCompilerConsole/obj/Debug
+/CultivationCompiler/bin/Debug
+/.vs/AeroSceneryCultivation/v15/*.suo
+/.vs/AeroSceneryCultivation/v15/Server/sqlite3
+/CultivationCompilerConsole/bin/Debug
+/CultivationCompilerConsole/*.user
+/AeroSceneryCultivationEditor/bin/Debug/x86
+/AeroSceneryCultivationEditor/bin/Debug
+/AeroSceneryCultivationEditor/obj/Debug
+/AeroSceneryCultivationEditor/obj/Release
