@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CultivationCompiler.Models.Rules
 {
-    public class ObjectRule
+    public class ObjectRule : Rule
     {
     }
 }

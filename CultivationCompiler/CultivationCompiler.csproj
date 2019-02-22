@@ -75,7 +75,7 @@
     <Compile Include="Models\Rules\ObjectRule.cs" />
     <Compile Include="Models\Rules\ShapeBuildingRule.cs" />
     <Compile Include="Models\Rules\WayTrackerRule.cs" />
-    <Compile Include="Models\XrefObject.cs" />
+    <Compile Include="Models\AFObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

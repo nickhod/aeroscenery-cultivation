@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CultivationCompiler.Models.Rules
 {
-    class AreaTrackerRule
+    public class AreaTrackerRule : Rule
     {
     }
 }

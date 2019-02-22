@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace CultivationCompiler.Models.Rules
 {
-    public class DistributeObjectsRule
+    public class DistributeObjectsRule : Rule
     {
+        public int Density { get; set; }
+
+        public IList<AFObject> Objects { get; set; }
+
+        public IList<Filter> Filters { get; set; }
     }
 }

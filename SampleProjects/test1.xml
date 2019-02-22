@@ -1,1 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Project>
+	<MinimumCultivationCompilerVersion>1.0</MinimumCultivationCompilerVersion>
+	<GeoData Type="xml">..\..\..\OSM Data\cardiff.osm</GeoData>
+	
+	<Rules>
+	
+		<!-- Plants -->
+		<DistributeObjectsRule>
+			<Filters>
+				<Filter Type="keyvalue">natural=wood</Filter>	
+				<Filter Type="keyvalue">landuse=forest</Filter>
+			</Filters>
+			<Density>2</Density>
+			<Objects>
+				<Object Type="plant" Weight="50">broadleaf</Object>
+				<Object Type="plant" Weight="50">conifer</Object>
+			</Objects>
+		</DistributeObjectsRule>
+		
+	<Rules>
+	
+	<Output>
+		<SplitGrid>0.25</SplitGrid>
+		<Path></Path>
+		<TSCFilePrefix>Test</TSCFilePrefix>
+		<TOCFilePrefix>Test</TOCFilePrefix>
+	</Output>
+</Project>
