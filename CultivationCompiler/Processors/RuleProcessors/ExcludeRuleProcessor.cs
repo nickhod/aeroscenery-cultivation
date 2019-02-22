@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CultivationCompiler.Models.Rules
+namespace CultivationCompiler.Processors.RuleProcessors
 {
-    public class AreaTrackerRule : Rule
+    class ExcludeRuleProcessor
     {
     }
 }

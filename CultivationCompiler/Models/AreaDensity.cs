@@ -5,19 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace CultivationCompiler.Models.Rules
+namespace CultivationCompiler.Models
 {
-    [XmlType("Object")]
-    public class AFObject
+    public class AreaDensity
     {
         [XmlAttribute]
-        public string Type { get; set; }
+        public int Min { get; set; }
 
         [XmlAttribute]
-        public int Weight{ get; set; }
-
+        public int Max { get; set; }
 
         [XmlText]
-        public string Value { get; set; }
+        public double Value { get; set; }
     }
 }

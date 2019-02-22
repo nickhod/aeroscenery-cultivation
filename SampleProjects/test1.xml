@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
 	<MinimumCultivationCompilerVersion>1.0</MinimumCultivationCompilerVersion>
-	<GeoData Type="xml">..\..\..\OSM Data\cardiff.osm</GeoData>
+	<GeoDataSources>
+		<GeoDataSource Name="Main" Type="osm-xml">..\..\..\OSM Data\cardiff.osm</GeoDataSource>
+	</GeoDataSources>
 	
 	<Rules>
 	
 		<!-- Plants -->
-		<DistributeObjectsRule>
+		<DistributeObjectsRule GeoDataSource="Main">
 			<Filters>
 				<Filter Type="keyvalue">natural=wood</Filter>	
 				<Filter Type="keyvalue">landuse=forest</Filter>
 			</Filters>
 			<Density>2</Density>
+			<AreaDensities>
+				<AreaDensity Min="0" Max="5000">2.0</AreaDensity>
+				<AreaDensity Min="5000" Max="6000">2.5</AreaDensity>
+				<AreaDensity Min="6000" Max="7000">3.0</AreaDensity>
+				<AreaDensity Min="7000" Max="9000">7.0</AreaDensity>
+				<AreaDensity Min="9000" Max="10000">12.0</AreaDensity>
+				<AreaDensity Min="10000">25.0</AreaDensity>
+			</AreaDensities>			
 			<Objects>
 				<Object Type="plant" Weight="50">broadleaf</Object>
 				<Object Type="plant" Weight="50">conifer</Object>
 			</Objects>
 		</DistributeObjectsRule>
 		
-	<Rules>
+	</Rules>
 	
 	<Output>
 		<SplitGrid>0.25</SplitGrid>
-		<Path></Path>
+		<Path>Test</Path>
 		<TSCFilePrefix>Test</TSCFilePrefix>
 		<TOCFilePrefix>Test</TOCFilePrefix>
 	</Output>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CultivationCompiler.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,17 @@ namespace CultivationCompiler.Processors
 {
     public class CultivationCompilerProcessor
     {
-        public async Task Compile(string projectFilename)
-        {
+        private ProjectService projectService;
 
+        public CultivationCompilerProcessor()
+        {
+            projectService = new ProjectService();
+        }
+
+        public void Compile(string projectFilename)
+        {
+            var project = projectService.LoadProject(projectFilename);
+            int i = -0;
         }
     }
 }

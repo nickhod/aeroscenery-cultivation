@@ -7,8 +7,11 @@ using System.Xml.Serialization;
 
 namespace CultivationCompiler.Models
 {
-    public class GeoData
+    public class GeoDataSource
     {
+        [XmlAttribute]
+        public string Name { get; set; }
+
         [XmlAttribute]
         public string Type { get; set; }
 

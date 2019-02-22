@@ -8,10 +8,12 @@ namespace CultivationCompiler.Models.Rules
 {
     public class DistributeObjectsRule : Rule
     {
-        public int Density { get; set; }
+        public double Density { get; set; }
 
-        public IList<AFObject> Objects { get; set; }
+        public List<AFObject> Objects { get; set; }
 
-        public IList<Filter> Filters { get; set; }
+        public List<Filter> Filters { get; set; }
+
+        public List<AreaDensity> AreaDensities { get; set; }
     }
 }

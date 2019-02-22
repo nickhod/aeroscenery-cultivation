@@ -8,5 +8,10 @@ namespace CultivationCompiler.Models
 {
     public class Output
     {
+        public double SplitGrid { get; set; }
+        public string Path { get; set; }
+        public string TSCFilePrefix { get; set; }
+        public string TOCFilePrefix { get; set; }
+
     }
 }

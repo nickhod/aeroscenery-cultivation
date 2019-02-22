@@ -11,10 +11,9 @@ namespace CultivationCompilerConsole
     public class CultivationCompilerConsoleManager
     {
         private CultivationCompilerProcessor cultivationCompilerProcessor;
-        private string projectFilename;
 
 
-        public async void Start(string projectPath)
+        public void Start(string projectPath)
         {
             this.cultivationCompilerProcessor = new CultivationCompilerProcessor();
 
@@ -23,7 +22,7 @@ namespace CultivationCompilerConsole
                 projectPath = Path.GetFullPath(projectPath);
             }
 
-            await cultivationCompilerProcessor.Compile(projectFilename);
+            cultivationCompilerProcessor.Compile(projectPath);
         }
     }
 }
