@@ -1,4 +1,6 @@
-﻿using CultivationCompiler.Processors;
+﻿using CultivationCompiler.Common;
+using CultivationCompiler.Processors;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,12 +12,16 @@ namespace CultivationCompilerConsole
 {
     public class CultivationCompilerConsoleManager
     {
-        private CultivationCompilerProcessor cultivationCompilerProcessor;
+        private readonly ILog log = LogManager.GetLogger("Cultivation Compiler");
 
+        private CultivationCompilerProcessor cultivationCompilerProcessor;
 
         public void Start(string projectPath)
         {
-            this.cultivationCompilerProcessor = new CultivationCompilerProcessor();
+
+            this.cultivationCompilerProcessor = CultivationCompilerProcessor.Instance;
+
+            this.cultivationCompilerProcessor.OnEventLogMessage += OnEventLogMessageReceived;
 
             if (!Path.IsPathRooted(projectPath))
             {
@@ -23,6 +29,17 @@ namespace CultivationCompilerConsole
             }
 
             cultivationCompilerProcessor.Compile(projectPath);
+        }
+
+        public void OnEventLogMessageReceived(object sender, EventLogMessageEventArgs e)
+        {
+            log.Info(e.EventLogMessage.Message);
+        }
+
+        public void OnProgressMessageReceived(object sender, ProgressMessageEventArgs e)
+        {
+            log.Info(e.ProgressMessage.Activity);
+
         }
     }
 }

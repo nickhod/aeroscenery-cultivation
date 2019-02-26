@@ -1,4 +1,5 @@
 ﻿using CultivationCompiler.Processors;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,10 @@ namespace CultivationCompilerConsole
 {
     class Program
     {
-
         static void Main(string[] args)
         {
+            log4net.Config.XmlConfigurator.Configure();
+
             var cultivationCompilerConsoleManager = new CultivationCompilerConsoleManager();
 
             var title = @"
@@ -36,6 +38,7 @@ By Nick Hoddinott
 Copyright (c) 2019
 ";
 
+
             Console.WriteLine(title);
             Console.WriteLine("");
 
@@ -50,6 +53,10 @@ Copyright (c) 2019
                 cultivationCompilerConsoleManager.Start(projectFilename);
 
             }
+
+
+
+            Console.ReadLine();
 
         }
 

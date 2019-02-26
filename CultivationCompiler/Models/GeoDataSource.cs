@@ -15,7 +15,10 @@ namespace CultivationCompiler.Models
         [XmlAttribute]
         public string Type { get; set; }
 
+        [XmlAttribute]
+        public string ImportMethod { get; set; }
+
         [XmlText]
-        public string Value { get; set; }
+        public string Filename { get; set; }
     }
 }

@@ -2,7 +2,9 @@
 <Project>
 	<MinimumCultivationCompilerVersion>1.0</MinimumCultivationCompilerVersion>
 	<GeoDataSources>
-		<GeoDataSource Name="Main" Type="osm-xml">..\..\..\OSM Data\cardiff.osm</GeoDataSource>
+		<GeoDataSource Name="Main" Type="osm-xml" ImportMethod="database">..\..\..\..\GeoData\london.osm</GeoDataSource>
+		<!--<GeoDataSource Name="Main" Type="osm-xml" ImportMethod="database">..\..\..\..\GeoData\cardiff.osm</GeoDataSource>-->
+		<!--<GeoDataSource Name="Main" Type="osm-xml" ImportMethod="database">..\..\..\..\GeoData\NewHampshire.geojson</GeoDataSource>-->
 	</GeoDataSources>
 	
 	<Rules>
