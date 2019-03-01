@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CultivationCompiler.Models
+namespace CultivationCompiler.Parsers
 {
-    public enum OSMDataFormat
+    class GeoJsonParser
     {
-        Xml,
-        Pbf
     }
 }

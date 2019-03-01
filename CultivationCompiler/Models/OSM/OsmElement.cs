@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CultivationCompiler.Models.OSM
 {
-    public class Bounds
+    public class OsmElement
     {
     }
 }

@@ -13,10 +13,10 @@ namespace CultivationCompiler.Models
         public string Name { get; set; }
 
         [XmlAttribute]
-        public string Type { get; set; }
+        public GeoDataSourceType Type { get; set; }
 
         [XmlAttribute]
-        public string ImportMethod { get; set; }
+        public ImportMethod ImportMethod { get; set; }
 
         [XmlText]
         public string Filename { get; set; }

@@ -13,7 +13,7 @@ namespace CultivationCompiler.Processors
     public class CultivationCompilerProcessor
     {
         private ProjectService projectService;
-        private OSMDataService osmDataService;
+        private OsmDataService osmDataService;
 
         public event EventHandler<EventLogMessageEventArgs> OnEventLogMessage;
         public event EventHandler<ProgressMessageEventArgs> OnProgressMessage;
@@ -23,7 +23,7 @@ namespace CultivationCompiler.Processors
         public CultivationCompilerProcessor()
         {
             projectService = new ProjectService();
-            osmDataService = new OSMDataService();
+            osmDataService = new OsmDataService();
         }
 
         public void Compile(string projectFilename)
@@ -47,15 +47,11 @@ namespace CultivationCompiler.Processors
 
                 switch (geoDataSource.Type)
                 {
-                    case "osm-xml":
-                        this.osmDataService.ReadOSMData(geoDataFilename, OSMDataFormat.Xml);
-                        int i = 0;
-                        break;
+                    case GeoDataSourceType.Osm:
 
-                    case "osm-pbf":
-                        this.osmDataService.ReadOSMData(geoDataFilename, OSMDataFormat.Pbf);
+                        this.osmDataService.ReadOSMData(geoDataFilename, geoDataSource.ImportMethod);
                         break;
-                    case "geojson":
+                    case GeoDataSourceType.GeoJson:
                         break;
                 }
             }
