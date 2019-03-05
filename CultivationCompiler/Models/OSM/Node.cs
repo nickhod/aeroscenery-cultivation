@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace CultivationCompiler.Models.OSM
 {
-    public class Node
+    public class Node : OsmElement
     {
+        public Node()
+        {
+            this.Tags = new List<Tag>();
+        }
+
         public long NodeId { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public bool Visible { get; set; }
+
 
     }
 }

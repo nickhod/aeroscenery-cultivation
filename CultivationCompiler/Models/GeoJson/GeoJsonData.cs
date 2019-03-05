@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CultivationCompiler.Models.GeoJson
 {
-    class Polygon
+    public class GeoJsonData
     {
+        public GeoJsonData()
+        {
+            this.Features = new List<Feature>();
+        }
+
+        public IList<Feature> Features { get; set; }
     }
 }

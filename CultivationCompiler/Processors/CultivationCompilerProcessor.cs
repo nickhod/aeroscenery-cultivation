@@ -14,6 +14,7 @@ namespace CultivationCompiler.Processors
     {
         private ProjectService projectService;
         private OsmDataService osmDataService;
+        private GeoJsonDataService geoJsonDataService;
 
         public event EventHandler<EventLogMessageEventArgs> OnEventLogMessage;
         public event EventHandler<ProgressMessageEventArgs> OnProgressMessage;
@@ -24,6 +25,7 @@ namespace CultivationCompiler.Processors
         {
             projectService = new ProjectService();
             osmDataService = new OsmDataService();
+            geoJsonDataService = new GeoJsonDataService();
         }
 
         public void Compile(string projectFilename)
@@ -52,8 +54,13 @@ namespace CultivationCompiler.Processors
                         this.osmDataService.ReadOSMData(geoDataFilename, geoDataSource.ImportMethod);
                         break;
                     case GeoDataSourceType.GeoJson:
+                        this.geoJsonDataService.ReadGeoJsonData(geoDataFilename, geoDataSource.ImportMethod);
                         break;
                 }
+
+                RaiseEventLogMessage(new EventLogMessage("Done", this, EventLogLevel.Debug));
+
+
             }
         }
 

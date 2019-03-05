@@ -34,8 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Dapper, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dapper.1.50.7\lib\net451\Dapper.dll</HintPath>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.1\lib\net451\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -43,20 +43,11 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="GeoJSON.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GeoJSON.Net.1.1.70\lib\net45\GeoJSON.Net.dll</HintPath>
-    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="OsmSharp, Version=6.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\OsmSharp.6.1.0\lib\net45\OsmSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="protobuf-net, Version=2.3.7.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
-      <HintPath>..\packages\protobuf-net.2.3.7\lib\net40\protobuf-net.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -91,9 +82,13 @@
     <Compile Include="Models\AreaDensity.cs" />
     <Compile Include="Models\GeoDataSourceType.cs" />
     <Compile Include="Models\GeoJson\Coordinate.cs" />
-    <Compile Include="Models\GeoJson\Polygon.cs" />
+    <Compile Include="Models\GeoJson\Feature.cs" />
+    <Compile Include="Models\GeoJson\GeoJsonData.cs" />
+    <Compile Include="Models\GeoJson\GeoJsonGeometryType.cs" />
+    <Compile Include="Models\GeoJson\Geometry.cs" />
     <Compile Include="Models\ImportMethod.cs" />
     <Compile Include="Models\OSM\Bounds.cs" />
+    <Compile Include="Models\OSM\Member.cs" />
     <Compile Include="Models\OSM\Node.cs" />
     <Compile Include="Models\OSM\OsmData.cs" />
     <Compile Include="Models\OSM\OsmElement.cs" />
@@ -119,6 +114,7 @@
     <Compile Include="Processors\RuleProcessors\ShapeBuildingRuleProcessor.cs" />
     <Compile Include="Processors\RuleProcessors\WayTrackerRuleProcessor.cs" />
     <Compile Include="Repositories\SqlLiteDataRepository.cs" />
+    <Compile Include="Services\GeoJsonDataService.cs" />
     <Compile Include="Services\OsmDataService.cs" />
     <Compile Include="Services\ProjectService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

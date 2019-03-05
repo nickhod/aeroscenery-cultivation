@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace CultivationCompiler.Models.OSM
 {
-    public class Relation
+    public class Relation : OsmElement
     {
+        public Relation()
+        {
+            Members = new List<Member>();
+            this.Tags = new List<Tag>();
+        }
+
+        public long RelationId { get; set; }
+
+        public IList<Member> Members { get; set; }
     }
 }

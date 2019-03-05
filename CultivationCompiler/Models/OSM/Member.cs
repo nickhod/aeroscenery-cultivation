@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace CultivationCompiler.Models.OSM
 {
-    public class OsmElement
+    public class Member
     {
-        public IList<Tag> Tags { get; set; }
-
+        public string Type { get; set; }
+        public long Ref { get; set; }
+        public string Role { get; set; }
     }
 }
