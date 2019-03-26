@@ -12,3 +12,9 @@
 /AeroSceneryCultivationEditor/bin/Debug
 /AeroSceneryCultivationEditor/obj/Debug
 /AeroSceneryCultivationEditor/obj/Release
+/.vs/Source/v15/*.suo
+/.vs/VSWorkspaceState.json
+/.vs
+/CultivationCompiler/obj/Release
+/CultivationCompilerConsole/obj/Release
+/SampleProjects/obj/Debug
